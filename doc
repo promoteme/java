@@ -1,0 +1,85 @@
+1，概述
+2，构造方法
+	6种构造方法
+		空构造：public String()
+		字节数组转字符串
+			public String(byte[] bytes)（注意字节数组的格式，数值范围-128~127）
+				字节数组转字符串.PNG
+			public String(byte[] bytes, int index, int length)
+		字符数组转字符串
+			public String(char[] value)
+			public String(char[] value, int index, int count)
+		字符串常量值转成字符串：public String(String original)
+		new与不new的区别
+	字符串字面值作为对象：String s = "abc"
+	字符串的方法：public int length()，返回字符串的长度
+	StringDemo.java
+	补充
+		String(StringBuffer buffer) 
+		String(StringBuilder builder) 
+3，String的特点：一旦被赋值就不能改变
+	String是常量，是指值不能改变，而不是引用.PNG
+4，String s = "abc"和new String("abc")的区别
+	new与不new的区别.PNG
+5，String面试题（需要重看）
+	变量相加先开空间再拼接，常量先拼接再找，没有就创建.PNG
+6，String类的判断功能
+	比较字符串内容是否相同，区分大小写：boolean equals(Object obj)
+	比较字符串的内容是否相同，忽略大小写：boolean equalsIgnoreCase(String str)
+	判断大字符串是否包含小字符串：boolean contains(String str)
+	判断字符串是都以某个指定的字符串开头：boolean startsWith(String str)
+	判断字符串是都以某个指定的字符串结尾：boolean endsWith(String str)
+	判断字符串是否为空：boolean isEmpty()
+	StringDemo.java
+遍历字符串
+	1，length()结合charAt()
+	2，字符串转为字符数组toCharArray()
+9，String类的其他功能
+	替换
+		String replace(char old, char new)
+		String replace(String old, String new)
+	去除两端空格
+		String trim()
+	按字典顺序比较
+		int compareTo(String str)
+		int compareToIgnoreCase(String str)
+	StringDemo.java
+	String类的compareTo方法的源码解析.txt
+8，String类的转换功能
+	字节数组转化
+		字节数组转字符串
+			public String(byte[] bytes)（注意字节数组的格式，数值范围-128~127）
+			public String(byte[] bytes, int index, int length)
+			2种
+		字符串转字节数组
+			public byte[] getBytes()
+	字符数组转化
+		字符数组转字符串
+			public String(char[] value)
+			public String(char[] value, int index, int count)
+			public static String valueOf(char[] chs)
+			3种
+		字符串转字符数组
+			public char[] toCharArray()
+	基本类型转字符串
+		public static String valueOf(int i)
+		valueOf.PNG
+		字节数组无法使用valueOf().PNG
+	转大小写
+		public String toUpperCase()
+		public String toLowerCase()
+	public String concat(String str)
+	StringDemo.java
+7，String类的获取功能
+	public int length()
+	public char charAt(int index)
+	获取字符索引
+		public int indexOf(int ch)
+		public int indexOf(int ch, int fromIndex)
+	获取字符串索引
+		public int indexOf(String str)
+		public int indexOf(String str, int fromIndex)
+	获取子串
+		public String substring(int start)
+		public String substring(int start, int end)
+	StringDemo.java
